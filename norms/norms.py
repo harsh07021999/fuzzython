@@ -1,5 +1,15 @@
-from utils import norm
-
+#from utils import norm
+def norm(type_=None, name=None):
+    """
+    Function decorator for defining a norm
+    :param type_: norm's type
+    :param name: norm's name
+    """
+    def decorator(func):
+        func.norm = type_
+        func.name = name
+        return func
+    return 
 __author__ = ''
 
 
